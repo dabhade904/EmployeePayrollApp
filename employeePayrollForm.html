@@ -15,13 +15,35 @@
         </div>
     </header>
     <div class ="form-content">
-        <form action="form" action="#" onsubmit="save();return false" >
+        <form clas="form" action="#" action="#" onsubmit="save();return false" >
             <div class="form-head">
                 Employee Payroll form
             </div>
             <div class="row-content">
-                <label class="lable text" for="name">Name</label>
+                <label class="label text" for="name">Name</label>
                 <input class="input"type="text" id="name" placeholder="your name........... " required>
+            </div>
+            
+            <div class="row-content">
+                <label class="label text"for="profile">Profile image</label>
+                <div class="profile-radio-content">
+                    <label >
+                        <input type="radio" id="profile1" name="profile" value="" required>
+                        <img class="profile" id="image1" src="img.png">
+                    </label>
+                    <label >
+                        <input type="radio" id="profile2" name="profile" value="" required>
+                        <img class="profile" id="image2" src="img.png">
+                    </label>
+                    <label >
+                        <input type="radio" id="profile3" name="profile" value="" required>
+                        <img class="profile" id="image3" src="img.png">
+                    </label>
+                    <label >
+                        <input type="radio" id="profile4" name="profile" value="" required>
+                        <img class="profile" id="image4" src="img.png">
+                    </label>
+                </div>
             </div>
         </form>
     </div>
