@@ -77,9 +77,19 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">Date and Time</label>
-                <input class="input" type="datetime-local" name="startDate" id="startDate">
+                <input class="input" type="date" name="startDate" id="startDate">
             </div>
-        </form>
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea class="input" name="Notes" id="notes" placeholder=".." style="height: 100px"></textarea>
+            </div>
+            <div class="buttonParent">
+                <a href="#" class="resetButton button cencelButton ">Cancel</a>
+                <div class="submit-reset">
+                    <button type="submit"class="button" id="submitButton">Submit</button>
+                    <button type="reset"class="resetButton button">Reset</button>
+                </div>
+            </div>
         <script>
             const salary = document.querySelector('#salary');
             const output = document.querySelector('.salary-output');
