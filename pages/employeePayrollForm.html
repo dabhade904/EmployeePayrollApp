@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Employee Payroll Form</title>
@@ -21,7 +22,7 @@
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" placeholder="your name........... " required>
+                <input class="input" type="text" id="name" name="name" placeholder="your name........... " required>
                   <error-output class="text-error" for="text" style="font-size: 12px; font-style: italic;color: red"></error-output>
             </div>
 
@@ -29,19 +30,19 @@
                 <label class="label text" for="profile">Profile image</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" id="profile1" name="profile" value="" required>
+                        <input type="radio" id="profile1" name="profile" value="assets\image1.jpg" required>
                         <img class="profile" id="image1" src="assets\image1.jpg">
                     </label>
                     <label>
-                        <input type="radio" id="profile2" name="profile" value="" required>
+                        <input type="radio" id="profile2" name="profile" value="assets\images2.jpg" required>
                         <img class="profile" id="image2" src="assets\images2.jpg">
                     </label>
                     <label>
-                        <input type="radio" id="profile3" name="profile" value="" required>
+                        <input type="radio" id="profile3" name="profile" value="assets\image4.jpg" required>
                         <img class="profile" id="image3" src="assets\image4.jpg">
                     </label>
                     <label>
-                        <input type="radio" id="profile4" name="profile" value="" required>
+                        <input type="radio" id="profile4" name="profile" value="assets\images2.jpg" required>
                         <img class="profile" id="image4" src="assets\images2.jpg">
                     </label>
                 </div>
@@ -57,15 +58,15 @@
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div>
-                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                     <label class="text" for="hr">HR</label>
-                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                    <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                     <label class="text" for="sales">Sales</label>
-                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                    <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                     <label class="text" for="finance">Finance</label>
-                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                    <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
                     <label class="text" for="engineer">Engineer</label>
-                    <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                    <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                     <label class="text" for="others">Others</label>
                 </div>
             </div>
@@ -78,8 +79,7 @@
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
                 <div>
-                    <select name="Date" id="date">
-                        <option value="Date" aria-placeholder="Date">Date</option>
+                    <select name="day"id="day">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -112,8 +112,7 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select name="Month" id="month">
-                        <option value="month" aria-placeholder="Month">Month</option>
+                    <select name="month" id="month" >
                         <option value="1">Jan</option>
                         <option value="2">Feb</option>
                         <option value="3">Mar</option>
@@ -127,8 +126,7 @@
                         <option value="11">Nov</option>
                         <option value="12">Dec</option>
                     </select>
-                    <select name="Year" id="year">
-                        <option value="year"aria-placeholder="Year">Year</option>
+                    <select name="year" id="year">
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
@@ -138,7 +136,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
-                <textarea class="input" name="Notes" id="notes" placeholder=".." style="height: 100px"></textarea>
+                <textarea class="input" name="notes" id="notes" placeholder=".." style="height: 100px"></textarea>
             </div>
             <div class="buttonParent">
                 <a href="#" class="resetButton button cencelButton ">Cancel</a>
@@ -147,14 +145,7 @@
                     <button type="reset" class="resetButton button">Reset</button>
                 </div>
             </div>
-            <script>
-                const salary = document.querySelector('#salary');
-                const output = document.querySelector('.salary-output');
-                output.textContent = salary.value;
-                salary.addEventListener('input', function () {
-                    output.textContent = salary.value;
-                })
-            </script>
+            
     </div>
 </body>
 
