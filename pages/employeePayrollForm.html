@@ -1,0 +1,161 @@
+<html>
+<head>
+    <title>Employee Payroll Form</title>
+   <link rel="stylesheet" href="css/empPayroll.css">
+   <script defer src="js/EmployeePayroll.js"></script>
+   <script defer src="js/new_payroll_form.js"></script>
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="assets\emp.jpg" alt="" width="11%">
+            <div>
+                <span class="emp-text">Employee</span><br>
+                <span class="emp-text emp-payroll">Payroll</span>
+            </div>
+        </div>
+    </header>
+    <div id="formId" class="form-content">
+        <form class="form" action="#" action="#" onreset="resetForm()" onsubmit="save()">
+            <div class="form-head">Employee Payroll form</div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" placeholder="your name........... " required>
+                  <error-output class="text-error" for="text" style="font-size: 12px; font-style: italic;color: red"></error-output>
+            </div>
+
+            <div class="row-content"> 
+                <label class="label text" for="profile">Profile image</label>
+                <div class="profile-radio-content">
+                    <label>
+                        <input type="radio" id="profile1" name="profile" value="" required>
+                        <img class="profile" id="image1" src="assets\image1.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile2" name="profile" value="" required>
+                        <img class="profile" id="image2" src="assets\images2.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile3" name="profile" value="" required>
+                        <img class="profile" id="image3" src="assets\image4.jpg">
+                    </label>
+                    <label>
+                        <input type="radio" id="profile4" name="profile" value="" required>
+                        <img class="profile" id="image4" src="assets\images2.jpg">
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="label text" for="name">Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label class="text" for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label class="text" for="female">Female</label>
+
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                    <label class="text" for="finance">Finance</label>
+                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                    <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                    <label class="text" for="others">Others</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your salary</label>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
+                    value="400000">
+                <output class="salary-output text" for="salary">400000</output>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="startDate">Start Date</label>
+                <div>
+                    <select name="Date" id="date">
+                        <option value="Date" aria-placeholder="Date">Date</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select name="Month" id="month">
+                        <option value="month" aria-placeholder="Month">Month</option>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                    <select name="Year" id="year">
+                        <option value="year"aria-placeholder="Year">Year</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea class="input" name="Notes" id="notes" placeholder=".." style="height: 100px"></textarea>
+            </div>
+            <div class="buttonParent">
+                <a href="#" class="resetButton button cencelButton ">Cancel</a>
+                <div class="submit-reset">
+                    <button type="submit" class="button" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
+            <script>
+                const salary = document.querySelector('#salary');
+                const output = document.querySelector('.salary-output');
+                output.textContent = salary.value;
+                salary.addEventListener('input', function () {
+                    output.textContent = salary.value;
+                })
+            </script>
+    </div>
+</body>
+
+</html>
