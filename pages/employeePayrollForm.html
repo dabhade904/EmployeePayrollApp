@@ -18,11 +18,11 @@
         </div>
     </header>
     <div id="formId" class="form-content">
-        <form class="form" action="#" action="#" onreset="resetForm()" onsubmit="save()">
+        <form class="form" action="#" action="#" onreset="resetForm()" onsubmit="save(event)">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="your name........... " required>
+                <input class="input" type="text" id="name" name="name" placeholder="your anme........... " required>
                   <error-output class="text-error" for="text" style="font-size: 12px; font-style: italic;color: red"></error-output>
             </div>
 
@@ -78,7 +78,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
-                <div>
+                <div id="date">
                     <select name="day"id="day">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -133,6 +133,7 @@
                         <option value="2022">2022</option>
                     </select>
                 </div>
+                <error-output class="date-error" for="startDate" style="font-size: 12px; font-style: italic;color: red"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
